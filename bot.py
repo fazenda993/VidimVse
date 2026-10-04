@@ -85,7 +85,7 @@ async def admin(message: Message):
 # --- Запуск ---
 async def main():
     init_db()
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, handle_signals=False)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
